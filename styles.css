@@ -1,3 +1,47 @@
-.navContainer .nav{
-    background-color: ;
+body {
+  background-color: #fff9d1;
+  font-family: 'Konkhmer Sleokchher';
+  color: #4D4D4D;
+}
+
+header {
+  background-color: #f7cac9;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5em;
+  padding-left: 3em;
+  padding-right: 3em;
+  
+}
+
+.navContainer {
+  background-color: #fff9d1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.navContainer > div {
+  padding-left: 1em;
+  padding-right: 1em;
+  position: relative;
+}
+
+.navContainer > div ul {
+  display: none;
+  list-style: none;
+  left: 0;
+  position: absolute;
+  margin-top: -0.1em;
+  background-color: #fff9d1;
+  padding-right: 3em;
+}
+
+.navContainer div:hover ul {
+  display: block;
 }
