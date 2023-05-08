@@ -1,11 +1,12 @@
 body {
-  background-color: #fff9d1;
-  font-family: 'Konkhmer Sleokchher';
-  color: #4D4D4D;
+  background-color: #ffe69a;
+  font-family: "Open Sans", sans-serif;
+  color: #383838;
+  line-height: 1.5;
 }
 
 header {
-  background-color: #f7cac9;
+  background-color: #92b4ec;
   padding: 10px;
   display: flex;
   justify-content: space-evenly;
@@ -14,11 +15,10 @@ header {
   gap: 5em;
   padding-left: 3em;
   padding-right: 3em;
-  
 }
 
 .navContainer {
-  background-color: #fff9d1;
+  background-color: #f7e9c9;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -38,10 +38,57 @@ header {
   left: 0;
   position: absolute;
   margin-top: -0.1em;
-  background-color: #fff9d1;
+  background-color: #f7e9c9;
   padding-right: 3em;
 }
 
 .navContainer div:hover ul {
   display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  color: #383838;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+button {
+  background-color: #ffd24c;
+  border: none;
+  padding: 1em 2em;
+  font-size: 1.1rem;
+  color: #383838;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffca00;
 }
