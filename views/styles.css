@@ -14,6 +14,7 @@ header {
   gap: 5em;
   padding-left: 3em;
   padding-right: 3em;
+  border-bottom: 5px solid #92b4ec;
 }
 
 .navContainer {
@@ -23,6 +24,8 @@ header {
   align-items: center;
   flex-wrap: wrap;
   flex-grow: 1;
+  border-top: 5px solid #92b4ec;
+  border-bottom: 5px solid #92b4ec;
 }
 
 .navContainer > div {
@@ -44,3 +47,95 @@ header {
 .navContainer div:hover ul {
   display: block;
 }
+
+.featured {
+  background-color: #92b4ec;
+  color: #ffffff;
+  padding: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.featured h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.featured p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.cta {
+  background-color: #92b4ec;
+  color: #ffffff;
+  padding: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.cta h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.cta p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.cta a {
+  color: #ffffff;
+  background-color: #333333;
+  padding: 1em 2em;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.cta a:hover {
+  background-color: #92b4ec;
+}
+/* sign in */
+form {
+  background-color: #ffd24c;
+  border-radius: 5px;
+  padding: 2em;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 3px;
+  border: none;
+  margin-bottom: 1em;
+}
+
+form input[type="submit"] {
+  background-color: #92b4ec;
+  color: #ffffff;
+  border-radius: 3px;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #7da2d6;
+}
+
+form p {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 0.8em;
+  color: #333333;
+}
+
