@@ -1,9 +1,13 @@
 const express = require("express");
 const app = express();
-app.set('view engine', 'ejs');
-app.get('/', (req,res)=>{
-    res.render('index');
+app.use(express.static("Public"));
+
+app.set("view engine", "ejs");
+app.get("/", (req, res) => {
+  res.render("index");
 });
-const signinRouter = require('./routes/signin');
+const signinRouter = require("./routes/signin");
+const signupRouter = require("./routes/signup");
 app.use("/signin", signinRouter);
-app.listen(3000); 
+app.use("/signup", signupRouter);
+app.listen(3000);

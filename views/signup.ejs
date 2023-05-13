@@ -11,12 +11,14 @@
   </head>
   <body>
     <%- include('./header.ejs') %>
-
- 
     <main>
       <div class="loginContainer">
         <br />
         <form>
+          <div class="formGroup">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" />
+          </div>
           <div class="formGroup">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" />
@@ -25,11 +27,7 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" />
           </div>
-          <input type="submit" value="Login" />
-          <div id="autentifica">
-            <h2>Dacă n-ai cont:</h2>
-            <a href="/signup">Autentifică-te </a>
-          </div>
+          <input type="submit" value="sign-up" />
         </form>
       </div>
     </main>

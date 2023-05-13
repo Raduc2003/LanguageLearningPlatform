@@ -44,8 +44,13 @@ header {
   padding-right: 3em;
 }
 
-.navContainer div:hover ul {
+.navContainer div:hover ul,
+ul a {
   display: block;
+  z-index: 11;
+  hyphens: none;
+  text-decoration: none;
+  color: #333333;
 }
 
 .featured {
@@ -138,4 +143,14 @@ form p {
   font-size: 0.8em;
   color: #333333;
 }
-
+#autentifica {
+  display: flex;
+  align-items: center;
+}
+#autentifica a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #7da2d6;
+  font-size: 1.5rem;
+}
