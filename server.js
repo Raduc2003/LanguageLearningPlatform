@@ -8,6 +8,8 @@ app.get("/", (req, res) => {
 });
 const signinRouter = require("./routes/signin");
 const signupRouter = require("./routes/signup");
+const coursesRouter = require("./routes/courses");
 app.use("/signin", signinRouter);
 app.use("/signup", signupRouter);
+app.use("/courses", coursesRouter);
 app.listen(3000);

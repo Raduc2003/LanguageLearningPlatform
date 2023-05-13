@@ -1,0 +1,53 @@
+form {
+    background-color: #ffd24c;
+    border-radius: 5px;
+    padding: 2em;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 1em;
+    font-weight: bold;
+  }
+  
+  form input[type="text"],
+  form input[type="password"] {
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 3px;
+    border: none;
+    margin-bottom: 1em;
+  }
+  
+  form input[type="submit"] {
+    background-color: #92b4ec;
+    color: #ffffff;
+    border-radius: 3px;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #7da2d6;
+  }
+  
+  form p {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 0.8em;
+    color: #333333;
+  }
+  #autentifica {
+    display: flex;
+    align-items: center;
+  }
+  #autentifica a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #7da2d6;
+    font-size: 1.5rem;
+  }
