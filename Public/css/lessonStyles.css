@@ -1,0 +1,47 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+header {
+  background-color: #ffd24c;
+  padding: 10px;
+  /* Header styles */
+}
+
+main {
+  background-color: #ffe69a;
+  padding: 20px;
+}
+
+.lesson-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.lesson-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.lesson-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666666;
+}
+
+.lesson-content {
+  /* Lesson content styles */
+}
+
+footer {
+  background-color: #f7cac9;
+  padding: 10px;
+  /* Footer styles */
+}

@@ -1,9 +1,11 @@
 const express = require("express");
+const jwt = require("jsonwebtoken");
+const cookieParser = require("cookie-parser");
 const app = express();
 app.use(express.static("Public"));
 
 app.set("view engine", "ejs");
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.render("index");
 });

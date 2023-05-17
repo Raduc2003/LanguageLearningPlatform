@@ -5,12 +5,12 @@ main {
 }
 .coursesContainter {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20em, 2fr));
   gap: 1rem;
   padding: 10em;
   justify-items: center;
   background-color: #92b4ec;
-  max-width: 50%;
+  max-width: 80%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
