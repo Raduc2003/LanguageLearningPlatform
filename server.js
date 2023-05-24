@@ -1,6 +1,6 @@
 const express = require("express");
-const jwt = require("jsonwebtoken");
-const cookieParser = require("cookie-parser");
+// const jwt = require("jsonwebtoken");
+// const cookieParser = require("cookie-parser");
 const app = express();
 app.use(express.static("Public"));
 

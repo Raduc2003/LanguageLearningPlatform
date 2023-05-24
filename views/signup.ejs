@@ -14,7 +14,7 @@
     <main>
       <div class="loginContainer">
         <br />
-        <form action="/signup" method="POST">
+        <form method="POST">
           <div class="formGroup">
             <label for="email">Email:</label>
             <input type="text" id="email" name="email" />
@@ -30,6 +30,8 @@
           <input type="submit" value="sign-up" />
         </form>
       </div>
+      <span class="error"><%= locals.error%></span>
+      
     </main>
   </body>
 </html>

@@ -51,3 +51,9 @@ form {
     color: #7da2d6;
     font-size: 1.5rem;
   }
+  .error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(168, 21, 21);
+  }
