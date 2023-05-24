@@ -4,12 +4,10 @@ window.onload = () => {
   const lessonRack = document.createElement("div");
   lessonRack.classList.add("roadmap");
 
-  // Adăugați o bară de progres
   const progressBar = document.createElement("div");
   progressBar.classList.add("progress-bar");
   lessonRack.appendChild(progressBar);
 
-  // Adăugați fiecare lecție ca o carte de lecție
   const lessonTitles = [
     "Say Hello!",
     "Understanding Words",
@@ -22,7 +20,6 @@ window.onload = () => {
     aref.href = `english/${i + 1}`;
     const lessonCard = document.createElement("div");
     lessonCard.classList.add("lessonCard");
-    // Adăugați simbolul pentru fiecare carte de lecție
     const symbol = document.createElement("span");
     symbol.classList.add("symbol");
     if (i < progress) {
@@ -37,13 +34,11 @@ window.onload = () => {
     }
     lessonCard.appendChild(symbol);
 
-    // Adăugați numele lecției
     const lessonTitle = document.createElement("span");
     lessonTitle.innerText = `Lesson ${i + 1}: ${lessonTitles[i]}`;
     lessonCard.appendChild(lessonTitle);
   }
 
-  // Actualizați bara de progres pentru a reflecta progresul
   const progressWidth = (progress / noLessons) * 100;
   const progressIndicator = document.createElement("div");
   progressIndicator.classList.add("progress");

@@ -1,29 +1,42 @@
 const express = require("express");
 const router = express.Router();
-
+const cookieParser =require("cookie-parser");
 router.use(cookieParser());
+const fs = require("fs");
 
+
+let users = [];
+
+fs.readFile("users.json", (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  users = JSON.parse(data);
+});
 router.get("/", (req, res) => {
   res.render("signin");
 });
 
 
 router.post('/', (req, res) => {
+
   const { username, password } = req.body;
-  
-  // Verificați utilizatorul (aici ar trebui să verificați împotriva utilizatorilor stocați local)
-  if (username === 'admin' && password === 'admin123') {
-    // Utilizatorul este autentificat, generați un token JWT
-    const token = jwt.sign({ username }, 'secretKey');
+  console.log(username);
+  const userExists = users.some(user => user.username === username && user.password === password);
+  if ( userExists) {
+    console.log("autentificat");
+    res.cookie('user', {
+      username:`${username}`,
+      password: `${password}`
+
+    });
     
-    // Setăm cookie-ul cu tokenul JWT
-    res.cookie('token', token, { httpOnly: true });
-    
-    // Redirecționați către pagina principală sau o altă pagină relevantă
-    res.redirect('/');
+    res.cookie("auth", "true"); 
+    res.redirect("/courses"); 
   } else {
-    // Autentificare eșuată, afișați un mesaj de eroare sau redirecționați către pagina de autentificare
-    res.redirect('/signin');
+    res.render("signin", { error: "Credențiale incorecte" });
   }
 });
 

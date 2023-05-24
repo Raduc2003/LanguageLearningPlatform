@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Login Page</title>
     <link rel="stylesheet" href="/css/loginStyles.css" />
-    <link 
+    <link
       href="https://fonts.googleapis.com/css?family=Konkhmer Sleokchher"
       rel="stylesheet"
     />
@@ -15,7 +15,7 @@
     <main>
       <div class="loginContainer">
         <br />
-        <form>
+        <form method="POST">
           <div class="formGroup">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" />
@@ -24,13 +24,14 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" />
           </div>
-          <input type="submit" value="Login" />
+          <input type="submit" value="sign-in" />
           <div id="autentifica">
             <h2>Dacă n-ai cont:</h2>
             <a href="/signup">Autentifică-te </a>
           </div>
         </form>
       </div>
+      <span class="error"><%= locals.error%></span>
     </main>
   </body>
 </html>
