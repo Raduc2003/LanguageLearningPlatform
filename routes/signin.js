@@ -1,9 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const cookieParser =require("cookie-parser");
+const cookieParser = require("cookie-parser");
 router.use(cookieParser());
 const fs = require("fs");
-
 
 let users = [];
 
@@ -19,22 +18,17 @@ router.get("/", (req, res) => {
   res.render("signin");
 });
 
-
-router.post('/', (req, res) => {
-
+router.post("/", (req, res) => {
   const { username, password } = req.body;
-  console.log(username);
-  const userExists = users.some(user => user.username === username && user.password === password);
-  if ( userExists) {
-    console.log("autentificat");
-    res.cookie('user', {
-      username:`${username}`,
-      password: `${password}`
 
-    });
-    
-    res.cookie("auth", "true"); 
-    res.redirect("/courses"); 
+
+  const authenticatedUser = users.find(
+    (user) => user.username === username && user.password === password
+  );
+  if (authenticatedUser) {
+    res.cookie("user", authenticatedUser);
+    res.cookie("auth", "true");
+    res.redirect("/courses");
   } else {
     res.render("signin", { error: "Credențiale incorecte" });
   }

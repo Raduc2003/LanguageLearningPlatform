@@ -1,16 +1,32 @@
 const express = require("express");
 const router = express.Router();
-router.get("/", function (req, res) {
+const { authenticate } = require("../Public/js/auth.js");
+const { updateUserProgress } = require("../Public/js/update.js");
+router.use(express.json());
+router.get("/", authenticate, function (req, res) {
   res.render("courses");
 });
 
-router.get("/:course", (req, res) => {
-  res.render(`courses/${req.params.course}`);
+router.get("/:course", authenticate, (req, res) => {
+  const loggedInUser = req.cookies.user;
+  res.render(`courses/${req.params.course}`, { user: loggedInUser });
 });
-router.get("/:course/:id", (req, res) => {
-  res.render(`courses/`+ req.params.course+"/"+ req.params.id);
+router.get("/:course/progress", authenticate, (req, res) => {
+  const loggedInUser = req.cookies.user;
+  res.setHeader("Cache-Control", "no-cache");
+  res.json({ progress: loggedInUser.progress });
 });
-// router.get("/english/lesson1", (req, res) => {
-//   res.render("courses/english/lesson1");
-// });
+
+router.post("/:course/progress", authenticate, (req, res) => {
+  const loggedInUser = req.cookies.user;
+  loggedInUser.progress = req.body.progress;
+  updateUserProgress(loggedInUser.id, loggedInUser.progress);
+
+  res.json({ progress: loggedInUser.progress });
+});
+
+router.get("/:course/:id", authenticate, (req, res) => {
+  res.render(`courses/` + req.params.course + "/" + req.params.id);
+});
+
 module.exports = router;

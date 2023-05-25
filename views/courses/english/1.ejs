@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <title>Lesson 1 - English Course</title>
     <link rel="stylesheet" href="/css/lessonStyles.css" />
+    <script src="/js/lesson.js"></script>
+    <!-- New JavaScript file for this page -->
   </head>
   <body>
     <%- include('../../header.ejs') %>
@@ -16,7 +18,16 @@
           In this lesson, we will cover the basics of the course.
         </p>
         <div class="lesson-content">
-          
+          <form id="quiz">
+            <h2>Quiz</h2>
+            <p>Question 1: ...</p>
+            <input type="radio" id="answer1" name="answer" value="1" />
+            <label for="answer1">Answer 1</label><br />
+            <input type="radio" id="answer2" name="answer" value="2" />
+            <label for="answer2">Answer 2</label><br />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
       </div>
     </main>
   </body>

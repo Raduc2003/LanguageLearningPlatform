@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Login Page</title>
+    <title>Sign In</title>
     <link rel="stylesheet" href="/css/loginStyles.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Konkhmer Sleokchher"
@@ -11,7 +11,6 @@
   </head>
   <body>
     <%- include('./header.ejs') %>
-
     <main>
       <div class="loginContainer">
         <br />
@@ -24,10 +23,10 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" />
           </div>
-          <input type="submit" value="sign-in" />
+          <input type="submit" value="Sign In" />
           <div id="autentifica">
-            <h2>Dacă n-ai cont:</h2>
-            <a href="/signup">Autentifică-te </a>
+            <h2>If you don't have an account:</h2>
+            <a href="/signup">Sign Up</a>
           </div>
         </form>
       </div>

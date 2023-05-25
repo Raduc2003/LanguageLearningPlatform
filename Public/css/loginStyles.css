@@ -1,59 +1,93 @@
+body {
+  background-color: #f5f5f5;
+  font-family: "Konkhmer Sleokchher", sans-serif;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.loginContainer {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 2em;
+  max-width: 600px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 form {
-    background-color: #ffd24c;
-    border-radius: 5px;
-    padding: 2em;
-    max-width: 500px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
+  margin-bottom: 1.5em;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.8em;
+  border-radius: 3px;
+  border: none;
+  font-size: 1em;
+}
+
+input[type="submit"] {
+  background-color: #92b4ec;
+  color: #ffffff;
+  border-radius: 3px;
+  border: none;
+  padding: 0.8em 1em;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background-color: #7da2d6;
+}
+
+#error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(168, 21, 21);
+  margin-top: 1em;
+  font-size: 1.2em;
+}
+
+#autentifica {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+}
+
+#autentifica h2 {
+  margin-right: 0.5em;
+  font-size: 1.2em;
+}
+
+#autentifica a {
+  text-decoration: none;
+  color: #7da2d6;
+  font-size: 1.5em;
+}
+
+@media (max-width: 600px) {
+  .loginContainer {
+    max-width: 100%;
+    padding: 1em;
   }
-  
-  form label {
-    display: block;
-    margin-bottom: 1em;
-    font-weight: bold;
-  }
-  
-  form input[type="text"],
-  form input[type="password"] {
-    width: 100%;
-    padding: 0.5em;
-    border-radius: 3px;
-    border: none;
-    margin-bottom: 1em;
-  }
-  
-  form input[type="submit"] {
-    background-color: #92b4ec;
-    color: #ffffff;
-    border-radius: 3px;
-    border: none;
-    padding: 0.5em 1em;
-    cursor: pointer;
-  }
-  
-  form input[type="submit"]:hover {
-    background-color: #7da2d6;
-  }
-  
-  form p {
-    margin-top: 1em;
-    text-align: center;
-    font-size: 0.8em;
-    color: #333333;
-  }
-  #autentifica {
-    display: flex;
-    align-items: center;
-  }
-  #autentifica a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #7da2d6;
-    font-size: 1.5rem;
-  }
-  .error{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(168, 21, 21);
-  }
+}

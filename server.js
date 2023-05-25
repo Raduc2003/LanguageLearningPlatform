@@ -7,20 +7,8 @@ app.use(cookieParser());
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 
-const authenticate = (req, res, next) => {
-  const authCookie = req.cookies.auth;
-  console.log(authCookie);
-  if (authCookie === "true") {
-    // Utilizatorul este autentificat, permite accesul la ruta protejată
-    next();
-  } else {
-    // Utilizatorul nu este autentificat, redirecționează către pagina de autentificare
-    res.redirect("/signin");
-  }
-};
 
-
-app.get("/",authenticate, (req, res) => {
+app.get("/", (req, res) => {
   res.render("index");
 });
 const signinRouter = require("./routes/signin");
@@ -32,5 +20,11 @@ app.use("/signin", signinRouter);
 app.use("/signup", signupRouter);
 app.use("/courses", coursesRouter);
 app.use("/profil",profileRouter);
+
+app.use((req, res) => {
+  res.status(404).render('404');
+});
+
+
 
 app.listen(3000);

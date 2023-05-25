@@ -2,18 +2,27 @@ body {
   font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  background-color: #f5f5f5;
   color: #333333;
 }
 
 header {
-  background-color: #ffd24c;
+  background-color: #3f51b5;
   padding: 10px;
-  /* Header styles */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5em;
+  padding-left: 3em;
+  padding-right: 3em;
+  -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 main {
-  background-color: #ffe69a;
+  background-color: #ffffff;
   padding: 20px;
 }
 
@@ -42,5 +51,4 @@ main {
 footer {
   background-color: #f7cac9;
   padding: 10px;
-  /* Footer styles */
 }
